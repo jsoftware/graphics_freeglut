@@ -13,7 +13,7 @@ Based on https://rosettacode.org/wiki/OpenGL/Utah_Teapot
 
 FOLDER=: 'graphics/freeglut'
 
-VERSION=: '1.0.0'
+VERSION=: '1.0.1'
 
 RELEASE=: ''
 
