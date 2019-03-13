@@ -9,15 +9,17 @@ Library from:
 http://freeglut.sourceforge.net/
 
 Based on https://rosettacode.org/wiki/OpenGL/Utah_Teapot
+
+Ubuntu will need libglut.so.3.10.0
 )
 
 FOLDER=: 'graphics/freeglut'
 
-VERSION=: '1.0.1'
+VERSION=: '1.0.2'
 
 RELEASE=: ''
 
-PLATFORMS=: 'win'
+PLATFORMS=: 'win linux'
 
 FILES=: 0 : 0
 freeglut.ijs

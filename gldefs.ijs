@@ -3,23 +3,22 @@ NB. freeglut and opengl defs
 coclass 'pfreeglut'
 
 3 : 0''
-if. UNAME-:'Linux' do.
-  LIBGLUT=: 'libglut.so'
-  LIBGL=: 'libGL.so'
-elseif. UNAME-:'Android' do.
-  LIBGLUT=: 'libglut.so'
-elseif. UNAME-:'Darwin' do.
-  LIBGLUT=: 'libglut.dylib'
-  LIBGL=: 'libGL.dylib'
-  if. fexist t=. '/opt/local/lib/libglut.dylib' do.
-    LIBGLUT=: t
-  elseif. fexist t=. '/opt/local/lib/libGL.dylib' do.
-    LIBGL=: t
-  end.
-elseif. UNAME-:'Win' do.
+if. IFWIN do.
   LIBGLUT=: jpath '~addons/graphics/freeglut/bin/freeglut.dll'
   LIBGL=: 'Opengl32.dll'
+elseif. UNAME-:'Darwin' do. 
+NB. TBD
+  smoutput 'Your operating system is not configured for freeglut.'
+elseif. +/'Ubuntu' E. spawn_jtask_'uname -a' do. 
+  LIBGLUT=: '/usr/lib/x86_64-linux-gnu/libglut.so'
+  LIBGL=: '/usr/local/lib/libglut.so'
+elseif. +/'CentOS' E. spawn_jtask_'lsb_release -a' do. 
+  LIBGLUT=: '/lib64/libglut.so.3'
+  LIBGL=: '/lib64/libGL.so'
+elseif. 1 do. 
+  smoutput 'Your operating system is not configured for freeglut.'
 end.
+if. -.fexist LIBGLUT do. smoutput 'You need to install freeglut.' end.
 )
 
 NB. =========================================================
