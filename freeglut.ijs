@@ -10,8 +10,8 @@ void=: 0$''
 rot=: f+0
 matCol=: f+1 0 0 0
 
-cb1=: cdcb '+ x x'
-cb2=: cdcb '+ x x x'
+cb1=: cdcb 'x x'
+cb2=: cdcb 'x x x'
 
 cdcallback=: 3 : 0
 y=. 15!:17''

@@ -18,7 +18,7 @@ elseif. +/'CentOS' E. spawn_jtask_'lsb_release -a' do.
 elseif. 1 do. 
   smoutput 'Your operating system is not configured for freeglut.'
 end.
-if. -.fexist LIBGLUT do. smoutput 'You need to install freeglut.' end.
+NB. if. -.fexist LIBGLUT do. smoutput 'You need to install freeglut.' end.
 )
 
 NB. =========================================================

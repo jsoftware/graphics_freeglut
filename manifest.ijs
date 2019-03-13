@@ -15,7 +15,7 @@ Ubuntu will need libglut.so.3.10.0
 
 FOLDER=: 'graphics/freeglut'
 
-VERSION=: '1.0.2'
+VERSION=: '1.0.3'
 
 RELEASE=: ''
 
