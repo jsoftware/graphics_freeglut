@@ -15,11 +15,11 @@ Ubuntu will need libglut.so.3.10.0
 
 FOLDER=: 'graphics/freeglut'
 
-VERSION=: '1.0.3'
+VERSION=: '1.0.4'
 
 RELEASE=: ''
 
-PLATFORMS=: 'win linux'
+PLATFORMS=: 'win linux darwin'
 
 FILES=: 0 : 0
 freeglut.ijs

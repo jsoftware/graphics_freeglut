@@ -7,8 +7,8 @@ if. IFWIN do.
   LIBGLUT=: jpath '~addons/graphics/freeglut/bin/freeglut.dll'
   LIBGL=: 'Opengl32.dll'
 elseif. UNAME-:'Darwin' do. 
-NB. TBD
-  smoutput 'Your operating system is not configured for freeglut.'
+  LIBGLUT=: 'libglut.dylib'
+  LIBGL=: 'libGL.dylib'
 elseif. +/'Ubuntu' E. spawn_jtask_'uname -a' do. 
   LIBGLUT=: '/usr/lib/x86_64-linux-gnu/libglut.so'
   LIBGL=: '/usr/local/lib/libglut.so'
